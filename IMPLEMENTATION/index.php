@@ -1,9 +1,5 @@
 <?php  session_start(); ?>
 <?php
-	echo '<!DOCTYPE html>';
-	echo '<html lang="en">';
-	echo '<head>';
-
     include("konfiguration.php");
 
 
@@ -21,6 +17,7 @@
             $password_GET = $result->fetch();
             $password_GET = $password_GET ["passwort"];
 
+			
             if($temp && $password == $password_GET) //wird überprüft ob Passwort stimmt
             {
                 $_SESSION['bEmail'] = $bEmail; //falls das Passwort nicht übereinstimmt                                     wird die Login seite neu aufgerufen
@@ -69,7 +66,7 @@
 			<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
                 
                 <!--Formular-->
-                <form class="col s12" action="login.php" method="post">
+                <form class="col s12" action="index.php" method="post">
                     
                 <!--Email-->
 				<div class='row'>
